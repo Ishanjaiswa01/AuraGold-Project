@@ -1,0 +1,15 @@
+# Dependencies
+/auragold-frontend/node_modules
+/auragold-backend/node_modules
+
+# Environment variables
+/auragold-frontend/.env
+/auragold-backend/.env
+
+# Build folder
+/auragold-frontend/dist
+
+# Logs
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
