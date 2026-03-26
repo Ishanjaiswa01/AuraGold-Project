@@ -1,0 +1,168 @@
+/* Import the Inter font from Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&display=swap');
+
+/* Define our color palette and global variables */
+:root {
+  --background-color: #0D1117;
+  --text-color: #E6EDF3;
+  --sidebar-bg: #161B22;
+  --border-color: rgba(255, 255, 255, 0.1);
+}
+
+/* Apply base styles to the entire application */
+body {
+  margin: 0;
+  padding: 0;
+  background-color: var(--background-color);
+  color: var(--text-color);
+  font-family: 'Inter', sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Main container for our two-column layout using Flexbox */
+.app-container {
+  display: flex;
+  min-height: 100vh;
+}
+
+/* Styling for the sidebar component */
+.sidebar {
+  width: 250px;
+  background-color: var(--sidebar-bg);
+  padding: 2rem;
+  border-right: 1px solid var(--border-color);
+}
+
+/* Styling for the main dashboard content area */
+.dashboard {
+  flex-grow: 1; /* Allows this element to take up the remaining space */
+  padding: 2rem;
+}
+
+/* Basic styling for sidebar elements (we'll improve this later) */
+.sidebar h2 {
+    text-align: center;
+    margin-top: 0;
+    margin-bottom: 3rem;
+}
+
+.sidebar ul {
+    list-style: none;
+    padding: 0;
+}
+
+.sidebar li {
+    padding: 1rem;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.2s ease-in-out;
+}
+
+.sidebar li:hover {
+    background-color: rgba(255, 255, 255, 0.05);
+}
+/* Grid container for the metric cards */
+.metrics-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr); /* Creates 4 equal columns */
+  gap: 1.5rem; /* Space between cards */
+  margin-bottom: 2rem;
+}
+
+/* This is the glassmorphism effect! */
+.metric-card {
+  background: rgba(30, 36, 44, 0.5); /* Semi-transparent background */
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px); /* For Safari compatibility */
+  border-radius: 12px;
+  border: 1px solid var(--border-color);
+  padding: 1.5rem;
+  text-align: center;
+}
+
+.metric-card h4 {
+    margin-top: 0;
+    font-weight: 500;
+    color: #8B949E; /* A lighter grey for the title */
+}
+
+.metric-card h2 {
+    margin-bottom: 0.5rem;
+    font-size: 2rem;
+}
+
+.metric-card p {
+    margin-bottom: 0;
+    color: #2F8132; /* Green for positive change */
+}
+
+/* Add to the bottom of src/index.css */
+.chart-container {
+  background: rgba(30, 36, 44, 0.5);
+  border: 1px solid var(--border-color);
+  border-radius: 12px;
+  padding: 1.5rem;
+}
+
+
+/* Add to the bottom of src/index.css */
+.news-feed-container {
+  margin-top: 2rem;
+}
+
+.news-item {
+  background-color: var(--sidebar-bg);
+  border: 1px solid var(--border-color);
+  border-radius: 8px;
+  padding: 1rem;
+  margin-bottom: 1rem;
+}
+
+.news-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 0.8rem;
+  color: #8B949E;
+  margin-bottom: 0.5rem;
+}
+
+.news-headline {
+  margin: 0;
+  font-weight: 500;
+}
+
+.sentiment-tag {
+  padding: 0.2rem 0.5rem;
+  border-radius: 12px;
+  font-size: 0.75rem;
+  font-weight: 700;
+}
+
+.sentiment-positive {
+  background-color: rgba(47, 129, 50, 0.3);
+  color: #38a169;
+}
+
+.sentiment-negative {
+  background-color: rgba(229, 62, 62, 0.3);
+  color: #e53e3e;
+}
+
+
+/* Sidebar controls styling */
+.sidebar-controls {
+  margin-top: 3rem;
+  border-top: 1px solid var(--border-color);
+  padding-top: 1.5rem;
+}
+.sidebar-controls label {
+  display: block;
+  margin-bottom: 1rem;
+  font-size: 0.9rem;
+}
+.slider {
+  width: 100%;
+  cursor: pointer;
+}
